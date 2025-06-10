@@ -2,7 +2,7 @@ apiVersion: helm.toolkit.fluxcd.io/v2
 kind: HelmRelease
 metadata:
   name: siebel-config
-  namespace: config-scmvanilla-4cgrfq
+  namespace: scmvanilla
 spec:
   chart:
     spec:
@@ -10,7 +10,7 @@ spec:
       sourceRef:
         kind: GitRepository
         name: siebel-repo
-        namespace: config-scmvanilla-4cgrfq
+        namespace: scmvanilla
   install:
     timeout: 120m
   interval: 10m
@@ -28,7 +28,7 @@ spec:
       replicas: 3
     dbInfo:
       dbPassword: SoGang##83
-      dbTnsAlias: config-scmvanilla-4cgrfq_tp
+      dbTnsAlias: scmvanilla_tp
       dbUser: SADMIN
       defaultIndexspace: DATA
       defaultTablespace: DATA
@@ -73,5 +73,5 @@ spec:
       registry_url: iad.ocir.io
       registry_user: cheolmin/cheolmin@gmail.com
     siebel:
-      env_name: config-scmvanilla-4cgrfq
+      env_name: scmvanilla
       tenancy_namespace: cheolmin
