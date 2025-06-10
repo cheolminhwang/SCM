@@ -10,7 +10,7 @@ spec:
       sourceRef:
         kind: GitRepository
         name: siebel-repo
-        namespace: config-scmvanilla-val0e1
+        namespace: config-scmvanilla-9i4jww
   interval: 10m
   install:
     timeout: 30m
