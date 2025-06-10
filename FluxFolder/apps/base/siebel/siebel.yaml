@@ -2,7 +2,7 @@ apiVersion: helm.toolkit.fluxcd.io/v2
 kind: HelmRelease
 metadata:
   name: siebel
-  namespace: config-scmvanilla-9i4jww
+  namespace: config-scmvanilla-koj7qn
 spec:
   chart:
     spec:
@@ -10,7 +10,7 @@ spec:
       sourceRef:
         kind: GitRepository
         name: siebel-repo
-        namespace: config-scmvanilla-9i4jww
+        namespace: config-scmvanilla-koj7qn
   install:
     timeout: 120m
   interval: 30m

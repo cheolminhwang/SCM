@@ -1,9 +1,9 @@
 apiVersion: siebel.metacontroller.io/v1alpha1
 kind: Monitor
 metadata:
-  name: config-scmvanilla-9i4jww-siebel-monitor
-  namespace: config-scmvanilla-9i4jww
+  name: config-scmvanilla-koj7qn-siebel-monitor
+  namespace: config-scmvanilla-koj7qn
 spec:
-  sourceName: config-scmvanilla-9i4jww-siebel-checksum
-  sourceNamespace: config-scmvanilla-9i4jww
+  sourceName: config-scmvanilla-koj7qn-siebel-checksum
+  sourceNamespace: config-scmvanilla-koj7qn
   deployment_type: CRM

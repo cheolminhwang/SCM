@@ -1,4 +1,4 @@
 apiVersion: v1
 kind: Namespace
 metadata:
-  name: config-scmvanilla-9i4jww
+  name: config-scmvanilla-koj7qn
