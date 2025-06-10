@@ -2,7 +2,7 @@ apiVersion: kustomize.toolkit.fluxcd.io/v1
 kind: Kustomization
 metadata:
   name: siebel-operator
-  namespace: config-scmvanilla-koj7qn
+  namespace: config-scmvanilla-4cgrfq
 spec:
   interval: 10m0s
   dependsOn:
@@ -10,7 +10,7 @@ spec:
   sourceRef:
     kind: GitRepository
     name: siebel-repo
-    namespace: config-scmvanilla-koj7qn
+    namespace: config-scmvanilla-4cgrfq
   path: ./siebel-operator
-  targetNamespace: config-scmvanilla-koj7qn
+  targetNamespace: config-scmvanilla-4cgrfq
   prune: true

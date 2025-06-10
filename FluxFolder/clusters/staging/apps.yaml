@@ -2,7 +2,7 @@ apiVersion: kustomize.toolkit.fluxcd.io/v1
 kind: Kustomization
 metadata:
   name: apps
-  namespace: config-scmvanilla-koj7qn
+  namespace: config-scmvanilla-4cgrfq
 spec:
   interval: 10m0s
   dependsOn:
@@ -10,12 +10,12 @@ spec:
     - name: siebel-operator
   sourceRef:
     kind: GitRepository
-    name: config-scmvanilla-koj7qn
-    namespace: config-scmvanilla-koj7qn
+    name: config-scmvanilla-4cgrfq
+    namespace: config-scmvanilla-4cgrfq
   path: ./FluxFolder/apps/staging
   prune: true
   healthChecks:
     - apiVersion: helm.toolkit.fluxcd.io/v2
       kind: HelmRelease
       name: siebel
-      namespace: config-scmvanilla-koj7qn
+      namespace: config-scmvanilla-4cgrfq
