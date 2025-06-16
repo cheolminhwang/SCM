@@ -2,7 +2,7 @@ apiVersion: source.toolkit.fluxcd.io/v1
 kind: GitRepository
 metadata:
   name: siebel-repo
-  namespace: scmvanilla
+  namespace: config-scmvanilla-nnmwa5
 spec:
   interval: 5m
   ref:
