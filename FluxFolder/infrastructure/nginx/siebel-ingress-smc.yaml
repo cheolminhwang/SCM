@@ -2,7 +2,7 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   annotations:
-    kubernetes.io/ingress.class: config-scmvanilla-nnmwa5-nginx
+    kubernetes.io/ingress.class: scmvanilla-nginx
     nginx.ingress.kubernetes.io/affinity: cookie
     nginx.ingress.kubernetes.io/backend-protocol: HTTPS
     nginx.ingress.kubernetes.io/proxy-body-size: 32m
@@ -26,5 +26,5 @@ spec:
         pathType: Prefix
   tls:
   - hosts:
-    - config-scmvanilla-nnmwa5-ingress-nginx-controller
+    - scmvanilla-ingress-nginx-controller
     secretName: lb-tls-certificate

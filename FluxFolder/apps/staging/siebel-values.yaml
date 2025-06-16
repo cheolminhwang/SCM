@@ -2,7 +2,7 @@ apiVersion: helm.toolkit.fluxcd.io/v2
 kind: HelmRelease
 metadata:
   name: siebel
-  namespace: config-scmvanilla-nnmwa5
+  namespace: scmvanilla
 spec:
   chart:
     spec:
