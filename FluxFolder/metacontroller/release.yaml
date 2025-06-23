@@ -2,7 +2,7 @@ apiVersion: helm.toolkit.fluxcd.io/v2
 kind: HelmRelease
 metadata:
   name: metacontroller
-  namespace: scmvanilla
+  namespace: scmvadbcs
 spec:
   chart:
     spec:
@@ -10,11 +10,11 @@ spec:
       sourceRef:
         kind: GitRepository
         name: siebel-repo
-        namespace: scmvanilla
+        namespace: scmvadbcs
   install:
     timeout: 30m
   interval: 10m0s
-  releaseName: scmvanilla-metacontroller
+  releaseName: scmvadbcs-metacontroller
   uninstall:
     timeout: 30m
   values:
