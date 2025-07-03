@@ -2,7 +2,7 @@ apiVersion: helm.toolkit.fluxcd.io/v2
 kind: HelmRelease
 metadata:
   name: nginx
-  namespace: scmvadbcs
+  namespace: config-scmvanilla-ui18zm
 spec:
   chart:
     spec:
@@ -10,12 +10,12 @@ spec:
       sourceRef:
         kind: GitRepository
         name: siebel-repo
-        namespace: scmvadbcs
+        namespace: config-scmvanilla-ui18zm
   install:
     timeout: 30m
   interval: 10m0s
-  releaseName: scmvadbcs-ingress-nginx
-  targetNamespace: scmvadbcs
+  releaseName: config-scmvanilla-ui18zm-ingress-nginx
+  targetNamespace: config-scmvanilla-ui18zm
   uninstall:
     timeout: 30m
   values:
@@ -27,14 +27,14 @@ spec:
       image:
         image: siebeldev/cm/ingress-nginx
         registry: phx.ocir.io
-        tag: v1.11.3
-      ingressClass: scmvadbcs-nginx
+        tag: v1.12.1
+      ingressClass: config-scmvanilla-ui18zm-nginx
       ingressClassByName: true
       ingressClassResource:
-        controllerValue: k8s.io/scmvadbcs-ingress-nginx
+        controllerValue: k8s.io/config-scmvanilla-ui18zm-ingress-nginx
         default: false
         enabled: true
-        name: scmvadbcs-nginx
+        name: config-scmvanilla-ui18zm-nginx
       metrics:
         enabled: true
       podAnnotations:
@@ -42,7 +42,7 @@ spec:
         prometheus.io/scrape: 'true'
       scope:
         enabled: true
-        namespace: scmvadbcs
+        namespace: config-scmvanilla-ui18zm
       service:
         annotations:
           oci.oraclecloud.com/load-balancer-type: lb

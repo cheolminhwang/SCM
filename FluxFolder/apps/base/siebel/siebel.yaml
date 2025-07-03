@@ -2,7 +2,7 @@ apiVersion: helm.toolkit.fluxcd.io/v2
 kind: HelmRelease
 metadata:
   name: siebel
-  namespace: scmvadbcs
+  namespace: config-scmvanilla-ui18zm
 spec:
   chart:
     spec:
@@ -10,7 +10,7 @@ spec:
       sourceRef:
         kind: GitRepository
         name: siebel-repo
-        namespace: scmvadbcs
+        namespace: config-scmvanilla-ui18zm
   install:
     timeout: 120m
   interval: 30m
@@ -41,7 +41,7 @@ spec:
         imagePullPolicy: IfNotPresent
         registry: phx.ocir.io
         repository: siebeldev/cm/siebel
-        tag: 25.3-full
+        tag: 25.6-full
       utils:
         imagePullPolicy: IfNotPresent
         registry: phx.ocir.io

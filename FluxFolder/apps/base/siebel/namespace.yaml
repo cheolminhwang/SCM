@@ -1,4 +1,4 @@
 apiVersion: v1
 kind: Namespace
 metadata:
-  name: scmvadbcs
+  name: config-scmvanilla-ui18zm
